@@ -38,6 +38,9 @@ body{
     margin:0px auto;
     font-weight: bold;
 }
+.a-tag{
+    line-height: 70px;
+}
 .find{
     position: absolute;
     /* background: white; */
@@ -57,40 +60,51 @@ body{
     width: 120px;
     text-decoration: none;
     color: white;
-}
-.o{
     position: relative;
-    top: 25%;
 }
-.x{
+.left-right-list a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+.list{
     position: relative;
     font-size: 20px;
     text-align: center;
     width: 120px;
     height:30px;
+    left:0px;
+    padding: 5px;
+    transition:left 1s;
 }
-.x:hover{
-    animation-name: x;
+.list:hover{
     background: rgba(52, 23, 216, 0.5);
-    animation-duration: 2s;
-    animation-fill-mode:forwards;
-}
-@keyframes x{
-    from{
-        left:0px;
-    }
-    to{
-        left:50px;
-    }
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);;
+    left: 30px;
 }
 .left-list{
-    display: inline-block;
-    position: relative;
+    display: none;
+    top: 70px;
+    left: 0px;
+    position: fixed;
+    text-align: center;
     width: 120px;
     height: 700px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
-.list{
-    position: absolute;
+.right-list{
+    display: none;
+    top: 70px;
+    right: 0px;
+    position: fixed;
+    text-align: center;
     width: 120px;
-    height: 30px;
+    height: 700px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.left_and_right-list-open{
+    display: none;
 }
