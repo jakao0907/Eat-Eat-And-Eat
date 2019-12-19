@@ -25,23 +25,23 @@
 	text-align:center;
 }
 #Introduction{
-	padding: 380px;
+	padding: 360px;
 	font-family: 微軟正黑體,DFKai-sb,Microsoft JhengHei;
 	font-size: 28px;
 	font-weight: 100;
 	color: white;
 	animation-name: moveTxt;
-	animation-duration: 5s;
+	animation-duration: 9s;
 	width: 350px;
 }
 #Title{
 	position: relative;
-	top: 250px;
+	top: 230px;
 	font-family: Cinzel;
-	font-size: 155px;
+	font-size: 160px;
 	color: white;
 	animation-name: moveTxt;
-	animation-duration: 5s;
+	animation-duration: 7s;
 	width: 100%;
 }
 span{
