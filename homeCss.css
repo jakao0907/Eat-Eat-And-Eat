@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
 .link{
 	position: center;
 	color: white;
@@ -24,14 +25,24 @@
 	text-align:center;
 }
 #Introduction{
-	padding: 60px;
+	padding: 360px;
 	font-family: 微軟正黑體,DFKai-sb,Microsoft JhengHei;
-	font-size: 25px;
+	font-size: 28px;
 	font-weight: 100;
 	color: white;
 	animation-name: moveTxt;
-	animation-duration: 3s;
-	width: 320px;
+	animation-duration: 9s;
+	width: 350px;
+}
+#Title{
+	position: relative;
+	top: 230px;
+	font-family: Cinzel;
+	font-size: 160px;
+	color: white;
+	animation-name: moveTxt;
+	animation-duration: 7s;
+	width: 100%;
 }
 span{
 	/*background:rgba(255, 255, 255, 0.5);*/
