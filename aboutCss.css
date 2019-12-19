@@ -19,7 +19,7 @@
 	height: 1500px;
 }
 #col{
-	height: 1500px;
+	height: 100%;
 	background:rgba(255, 255, 255, 0.18);
 }
 #Introduction{
@@ -40,6 +40,9 @@ iframe{
 	padding: 0px;
 	width:85%;
 	height:800px;
+}
+html{
+	height:100%;
 }
 span{
 	/*background:rgba(255, 255, 255, 0.5);*/
