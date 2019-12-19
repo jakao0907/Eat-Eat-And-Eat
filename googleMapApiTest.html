@@ -1,72 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      var locations=[
-        ['呱', 25.16, 121.8, 4]
-      ]
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          // center: {lat: 25.151409, lng: 121.772514},
-          // zoom: 17
-          center: {lat: 25.15, lng: 121.773},
-          zoom: 17
-        });
-        pa={lat: 25.15, lng: 121.773};
-        var marker = new google.maps.Marker({position: pa, map: map});
-        var infowindow = new google.maps.InfoWindow({
-          content: "contentString",
-          position: {lat: 25.151, lng: 121.1773},
-          maxWidth:200,
-          pixelOffset: new google.maps.Size(100, -20) 
-        });
-
-      }
-      var infowindow = new google.maps.InfoWindow();
-
-      var marker, i;
-
-      for (i = 0; i < locations.length; i++) {
-        marker = new google.maps.Marker({position:{lat:locations[i][1], lng:locations[i][2]}, map: map});
-
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-          return function() {
-            infowindow.setContent(locations[i][0]);
-            infowindow.open(map, marker);
-          }
-        })(marker, i));
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaBkHS8AUvsEthkMliEKHjveSoz_Godg4&callback=initMap" async defer>
-      
-    </script>
-  </body>
-</html> -->
-
-
-
-
-
 <!DOCTYPE html>
 <html> 
 <head> 
@@ -80,10 +11,9 @@
 
   <script type="text/javascript">
     var locations = [
-      ['寶貝', 25.1488, 121.7739, 4],
-      ['呱', 25.151, 121.77, 4],
-      ['呱', 25.152, 121.77, 4],
-      ['呱', 25.153, 121.77, 4]
+      ['test1', 25.151, 121.7715, 4],
+      ['test2', 25.151, 121.772, 4],
+      ['test3', 25.151, 121.77, 4]
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
