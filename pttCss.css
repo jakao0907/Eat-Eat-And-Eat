@@ -31,13 +31,9 @@ html{
 	height:100%;
 }
 iframe{
-	padding: 5%;
+	padding: 1%;
 	width:85%;
 	height:100%;
-	overflow: hidden;
-}
-span{
-	/*background:rgba(255, 255, 255, 0.5);*/
 }
 body{
 	margin: 0px;
