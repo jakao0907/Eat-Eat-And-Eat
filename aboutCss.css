@@ -16,39 +16,48 @@
 #all{
 	background-image: url("food3.jpg");
 	background-size: cover;
-	height: 1500px;
+	height: 100%;
 }
 #col{
 	height: 100%;
 	background:rgba(255, 255, 255, 0.18);
 }
-#Introduction{
-	padding: 60px;
-	font-family: 微軟正黑體,DFKai-sb,Microsoft JhengHei;
-	font-size: 25px;
+#p1{
+	background:rgba(255, 255, 255, 0.1);
+}
+.name{
+	font-family: Microsoft JhengHei;
+	font-size: 22px;
 	font-weight: 100;
 	color: white;
-	animation-name: moveTxt;
-	animation-duration: 3s;
-	width: 320px;
+	width: 160px;
+	height: 50px;
+	background:rgba(0, 0, 0, 0.5);
+	padding-top: 20px;
+	padding-left: 65px;
+}
+.writer{
+	width: 66px;
+}
+.list{
+	position: absolute;
+	left: 225px;
+	top: 70px;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+	font-size: 100px;
+	height: 140px;
 }
 #ppt{
 	text-align: center;
 	padding: 2%;
 }
-iframe{
-	padding: 0px;
-	width:85%;
-	height:800px;
-}
 html{
 	height:100%;
 }
-span{
-	/*background:rgba(255, 255, 255, 0.5);*/
-}
 body{
 	margin: 0px;
+	height: 100%;
 	overflow:hidden;
 }
 a:hover {
