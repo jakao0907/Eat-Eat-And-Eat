@@ -2,7 +2,7 @@
 body{
     margin: 0; 
     padding: 0;
-    overflow: auto;
+    overflow: hidden;
 }
 .background{
     margin-top: 0px;
@@ -45,66 +45,101 @@ body{
     position: absolute;
     /* background: white; */
     right: 0px;
-    width: 120px;
+    width: 200px;
     height: 70px;
 }
 .memu{
     position: absolute;
     /* background: white; */
-    width: 120px;
+    left: 0px;
+    width: 200px;
     height:70px;
 }
 .header a{
     display: inline-block;
     height: 70px;
-    width: 120px;
+    width: 200px;
     text-decoration: none;
     color: white;
     position: relative;
 }
-.left-right-list a{
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    background-color: white;
-}
-.list{
+.list-left{ /*左大區塊的每一個區塊 */
     position: relative;
     font-size: 20px;
     text-align: center;
-    width: 120px;
+    width: 200px;
     height:30px;
     left:0px;
-    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     transition:left 1s;
 }
-.list:hover{
+.list-left:hover{
     background: rgba(52, 23, 216, 0.5);
     box-shadow: 5px 5px 5px rgba(0,0,0,0.6);;
     left: 30px;
 }
-.left-list{
-    display: none;
+.list-right{ /*右大區塊的每一個區塊 */
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    height:30px;
+    right:0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition:right 1s;
+}
+.list-right:hover{
+    background: rgba(52, 23, 216, 0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);;
+    right: 30px;
+}
+.left-right-list a{
+    text-decoration: none;
+    color: black;
+}
+.left-list{ /*左大區塊的CSS */
+    /* display: none; */ 
+    top: 70px;
+    left: 0px;
+    position:absolute;
+    text-align: center;
+    width: 0px;
+    height: 700px;
+    background: white;
+    padding-bottom: 10px;
+}
+.right-list{  /*右大區塊的CSS */
+    /* display: none; */
+    top: 70px;
+    right: 0px;
+    position: absolute;
+    text-align: center;
+    width: 0px;
+    height: 700px;
+    background: white;
+    padding-bottom: 10px;
+}
+.left-list-open{
     top: 70px;
     left: 0px;
     position: fixed;
     text-align: center;
-    width: 120px;
+    width: 200px;
     height: 700px;
-    padding-right: 10px;
+    background: white;
     padding-bottom: 10px;
+    transition: 0.6s;
 }
-.right-list{
-    display: none;
+.right-list-open{
     top: 70px;
     right: 0px;
     position: fixed;
     text-align: center;
-    width: 120px;
+    width: 200px;
     height: 700px;
-    padding-left: 10px;
+    background: white;
     padding-bottom: 10px;
-}
-.left_and_right-list-open{
-    display: none;
+    transition: 0.6s;
 }
