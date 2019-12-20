@@ -8,12 +8,16 @@ function start(){
 }
 function left_handler(e){
     id=document.getElementsByClassName("left-list");
-    id[0].setAttribute("class","left-list-open");
+    id2=document.getElementsByClassName("list-left");
+    id[0].setAttribute("class","left-list left-right-list-open");
+    for(let i=0;i<id2.length;i++){
+        id2[i].setAttribute("class","list-left list-left-open");
+    }
     e.preventDefault();
 }
 function right_handler(e){
     id=document.getElementsByClassName("right-list");
-    id[0].setAttribute("class","right-list-open");
+    id[0].setAttribute("class","right-list left-right-list-open");
     e.preventDefault();
 }
 window.addEventListener("load",start,false);
