@@ -12,20 +12,20 @@ body{
     margin-left: 0px;
     height: 100%;
     width: 100%;
-    background-image:url("main.jpg");
+    background-image:url("food13.jpg");
     background-size:cover;
 }
 .all{
     height: 100%;
     width: 100%;
     font-weight: bold;
-    background:rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.1);
 }
 .header{
     position: fixed;
     width: 100%;
     height: 70px;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.5);
     color:white;
     font-family: cursive;
     font-size: 20px;
@@ -51,23 +51,23 @@ body{
     position: absolute;
     /* background: white; */
     left: 0px;
-    width: 200px;
+    /*width: 200px;*/
     height:70px;
-
+    font-weight: 100;
     /*position: center;*/
     color: white;
     /*text-decoration:none;*/
     font-family: Microsoft JhengHei;
     font-size: 22px;
-    margin: 25px;
+    margin: 20px;
 }
 .header a{
     display: inline-block;
     height: 70px;
-    width: 200px;
     text-decoration: none;
     color: white;
     position: relative;
+
 }
 .list-left{ /*左大區塊的每一個區塊 */
     position: relative;
@@ -134,4 +134,7 @@ body{
 .list-left-open{
     left: 0px;
     transition:left 0.6s;
+}
+.a-tag a:hover{
+    background-color: gray;
 }
