@@ -1,23 +1,64 @@
-
+var open_left=false;
+var open_right=false;
 function start(){
     left_a_link=document.getElementById("left");
     right_a_link=document.getElementById("right");
     left_a_link.addEventListener("click",left_handler,false);
     right_a_link.addEventListener("click",right_handler,false);
-
+    go_back_content=document.getElementsByClassName("content");
+    go_back_content[0].addEventListener("click",back,false);
+    go_back_head=document.getElementsByClassName("header");
+    go_back_head[0].addEventListener("click",back,false);
 }
 function left_handler(e){
-    id=document.getElementsByClassName("left-list");
-    id2=document.getElementsByClassName("list-left");
-    id[0].setAttribute("class","left-list left-right-list-open");
-    for(let i=0;i<id2.length;i++){
-        id2[i].setAttribute("class","list-left list-left-open");
+    if(open_left==false){
+        id=document.getElementsByClassName("left-list");
+        id2=document.getElementsByClassName("list-left");
+        id[0].setAttribute("class","left-list left-right-list-open");
+        for(let i=0;i<id2.length;i++){
+            id2[i].setAttribute("class","list-left list-left-open");
+        }
+        content_black();
+        setTimeout(function(){ open_left=true;console.log(open_left); }, 300);
+        e.preventDefault();
     }
-    e.preventDefault();
 }
 function right_handler(e){
-    id=document.getElementsByClassName("right-list");
-    id[0].setAttribute("class","right-list left-right-list-open");
-    e.preventDefault();
+    if(open_right==false){
+        id=document.getElementsByClassName("right-list");
+        console.log(id[0]);
+        id[0].setAttribute("class","right-list left-right-list-open");
+        content_black();
+        setTimeout(function(){ open_right=true;console.log(open_right); }, 300);
+        e.preventDefault();
+    }
+}
+function back(e){
+    if(open_left==true){
+        id=document.getElementsByClassName("left-right-list-open");
+        id[0].setAttribute("class","left-list");
+        id2=document.getElementsByClassName("list-left list-left-open");
+        for(let i=0;i<id2.length;){
+            id2[i].setAttribute("class","list-left");
+        }
+        open_left=false;
+        content_back()
+        e.preventDefault();
+    }
+    else if(open_right==true){
+        id=document.getElementsByClassName("right-list left-right-list-open");
+        id[0].setAttribute("class","right-list");
+        open_right=false;
+        content_back()
+        e.preventDefault();
+    }
+}
+function content_black(){
+    id=document.getElementsByClassName("content");
+    id[0].setAttribute("class","content content_black");
+}
+function content_back(){
+    id=document.getElementsByClassName("content content_black");
+    id[0].setAttribute("class","content");
 }
 window.addEventListener("load",start,false);
