@@ -60,10 +60,10 @@ body{
     font-family: Microsoft JhengHei;
     font-size: 22px;
     margin: 20px;
+    margin-left: 65px;
 }
 .header a{
     display: inline-block;
-    height: 70px;
     text-decoration: none;
     color: white;
     position: relative;
@@ -82,7 +82,7 @@ body{
 }
 .list-left:hover{
     background: rgba(52, 23, 216, 0.5);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
     left: 30px;
 }
 .list-right{ /*右大區塊的每一個區塊 */
