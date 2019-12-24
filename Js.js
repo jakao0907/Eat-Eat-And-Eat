@@ -19,7 +19,7 @@ function left_handler(e){
             id2[i].setAttribute("class","list-left list-left-open");
         }
         content_black();
-        setTimeout(function(){ open_left=true;console.log(open_left); }, 300);
+        setTimeout(function(){ open_left=true;console.log(open_left); }, 200);
         e.preventDefault();
     }
 }
@@ -29,7 +29,7 @@ function right_handler(e){
         console.log(id[0]);
         id[0].setAttribute("class","right-list left-right-list-open");
         content_black();
-        setTimeout(function(){ open_right=true;console.log(open_right); }, 300);
+        setTimeout(function(){ open_right=true;console.log(open_right); }, 200);
         e.preventDefault();
     }
 }
@@ -54,11 +54,11 @@ function back(e){
     }
 }
 function content_black(){
-    id=document.getElementsByClassName("content");
-    id[0].setAttribute("class","content content_black");
+    id=document.getElementsByClassName("hover_all");
+    id[0].setAttribute("class","hover_all hover_all_black");
 }
 function content_back(){
-    id=document.getElementsByClassName("content content_black");
-    id[0].setAttribute("class","content");
+    id=document.getElementsByClassName("hover_all hover_all_black");
+    id[0].setAttribute("class","hover_all");
 }
 window.addEventListener("load",start,false);

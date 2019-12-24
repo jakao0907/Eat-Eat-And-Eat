@@ -7,7 +7,7 @@ body{
     overflow: hidden;
     height: 100%;
 }
-.background{
+.background{ /*背景圖*/
     margin-top: 0px;
     margin-left: 0px;
     height: 100%;
@@ -16,14 +16,14 @@ body{
     background-size:cover;
     
 }
-.all{
+.all{   /*整個網頁內容的大div*/
     height: 100%;
     width: 100%;
     font-weight: bold;
     text-align:center;
     background:rgba(255,255,255,0.5);
 }
-.header{
+.header{    /*最上面那條的div*/
     position: fixed;
     width: 100%;
     height: 70px;
@@ -45,25 +45,31 @@ body{
 .a-tag{
     line-height: 70px;
 }
-.find{
+.find{  /*find的div*/
     position: absolute;
     /* background: white; */
     right: 0px;
     width: 200px;
     height: 70px;
 }
-.memu{
+.memu{  /*Memu的div*/
     position: absolute;
     /* background: white; */
     left: 0px;
     width: 200px;
     height:70px;
 }
+a:not(.header){
+    text-decoration: none;
+    color: black;
+    display: block;
+}
 .header a{
     display: inline-block;
+    text-decoration: none;
+    line-height: 70px;
     height: 70px;
     width: 200px;
-    text-decoration: none;
     color: white;
     position: relative;
 }
@@ -74,9 +80,9 @@ body{
     left:-200px;
     padding-top: 15px;
     padding-bottom: 15px;
-    transition:0.6s;
+    transition:0.4s;
 }
-.list-left:hover{
+.list-left:hover{   /*滑鼠覆蓋在左邊的清單上*/
     background: rgba(52, 23, 216, 0.5);
     box-shadow: 5px 5px 5px rgba(0,0,0,0.6);;
     left: 30px;
@@ -88,9 +94,9 @@ body{
     right:0px;
     padding-top: 15px;
     padding-bottom: 15px;
-    transition: 0.6s;
+    transition: 0.4s;
 }
-.list-right:hover{
+.list-right:hover{  /*滑鼠覆蓋在右邊的清單上*/
     background: rgba(52, 23, 216, 0.5);
     box-shadow: 5px 5px 5px rgba(0,0,0,0.6);;
     right: 30px;
@@ -110,7 +116,7 @@ body{
     background: white;
     padding-bottom: 10px;
     z-index: 1;
-    transition:0.6s;
+    transition:0.4s;
 }
 .right-list{  /*整個右大區塊的CSS */
     /* display: none; */
@@ -123,15 +129,15 @@ body{
     background: white;
     padding-bottom: 10px;
     z-index: 1;
-    transition:0.6s;
+    transition:0.4s;
 }
 .left-right-list-open{
     width: 200px;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 .list-left-open{
     left: 0px;
-    transition:0.6s;
+    transition:0.4s;
 }
 .content{
     position: absolute;
@@ -140,23 +146,65 @@ body{
     width: 100%;
     height: 100%;
     z-index: 0;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 .col{
-    width: 25%;
-    margin: 0px;
+    width: 24%;
+    padding: 0.5%;
+    padding-top: 0%;
     height: 100%;
     float: left;
 }
 div{
     display: block;
 }
-.shop{
+.shop{  /*每個店家區塊的div */
+    font-family: cursive;
+    font-size: 20px;
     width: 100%;
-    height: 300px;
+    height: 350px;
     float: left;
+    border-style: solid;
+    border-radius: 0.1px;
+    /* overflow: hidden; */
+}
+.shop img{
+    width: 100%;
+}
+.shop a{
+    display: block;
+    height: 100%;
+}
+.shop_hover:hover{
+    background: rgba(0,0,0,0.4);
+}
+.hover_all{
+    overflow: hidden;
+    top:-0.1%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+.hover_all_black{
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+.shop_hover{
+    position: absolute;
+    z-index: 2;
+    width: 24%;
+    height: 350px;
+    transition: 0.4s;
+}
+.shop div{  /*每個店家區塊的文字div */
+    /* float: left; */
+    /* width: 100%; */
 }
 .content_black{
     background: rgba(0,0,0,0.6);
-    transition: 0.6s;
+    transition: 0.4s;
 }
