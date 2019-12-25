@@ -101,7 +101,32 @@
 				p.stopImageNumber=$.isNumeric(defaultProperty.originalStopImageNumber)&&Number(defaultProperty.originalStopImageNumber)>=0?Number(defaultProperty.originalStopImageNumber):Math.floor(Math.random()*p.imageCount);
 				p.startCallback();roll();setTimeout(function(){slowDownSetup()},p.duration*1e3)
 			};
-			var stop=function(option){if(!p.isSlowdown){if(option){var stopImageNumber=Number(option.stopImageNumber);if(0<=stopImageNumber&&stopImageNumber<=p.imageCount-1){p.stopImageNumber=option.stopImageNumber}}slowDownSetup()}};var option=function(options){p=$.extend(p,options);p.speed=Number(p.speed);p.duration=Number(p.duration);p.duration=p.duration>1?p.duration-1:1;defaultProperty.originalStopImageNumber=options.stopImageNumber};var ret={start:start,stop:stop,init:init,option:option};return ret};var pluginName="roulette";$.fn[pluginName]=function(method,options){return this.each(function(){var self=$(this);var roulette=self.data("plugin_"+pluginName);if(roulette){if(roulette[method]){roulette[method](options)}else{console&&console.error("Method "+method+" does not exist on jQuery.roulette")}}else{roulette=new Roulette(method);roulette.init(self,method);$(this).data("plugin_"+pluginName,roulette)}})}})(jQuery);
+			var stop=function(option){
+				if(!p.isSlowdown){
+					if(option){
+						var stopImageNumber=Number(option.stopImageNumber);
+						if(0<=stopImageNumber&&stopImageNumber<=p.imageCount-1){
+							p.stopImageNumber=option.stopImageNumber
+						}
+					}
+					slowDownSetup()
+				}
+			};
+			var option=function(options){
+				p=$.extend(p,options);
+				p.speed=Number(p.speed);
+				p.duration=Number(p.duration);
+				p.duration=p.duration>1?p.duration-1:1;
+				defaultProperty.originalStopImageNumber=options.stopImageNumber
+			};
+			var ret={
+				start:start,stop:stop,init:init,option:option
+			};
+			return ret
+		};
+		var pluginName="roulette";
+		$.fn[pluginName]=function(method,options){
+			return this.each(function(){var self=$(this);var roulette=self.data("plugin_"+pluginName);if(roulette){if(roulette[method]){roulette[method](options)}else{console&&console.error("Method "+method+" does not exist on jQuery.roulette")}}else{roulette=new Roulette(method);roulette.init(self,method);$(this).data("plugin_"+pluginName,roulette)}})}})(jQuery);
 
 
 var option = {

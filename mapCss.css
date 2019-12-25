@@ -12,17 +12,12 @@
 	height: 70px;
     padding:0px;
     font-weight: 100;
-    /*background-color: black;*/
     background:rgba(0, 0, 0, 0.9);
 }
 #col{
 	height: 1500px;
 	background:rgba(255, 255, 255, 0.18);
-}
-span{
-	/*background:rgba(255, 255, 255, 0.5);*/
-}
-body{
+}body{
 	margin: 0px;
 	overflow:hidden;
 }

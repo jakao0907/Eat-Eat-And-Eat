@@ -5,6 +5,9 @@
       <meta charset = "utf-8">
       <title>about</title>
       <link rel = "stylesheet" type = "text/css" href = "randomChoiceCss.css">
+      <script  src="randomChoice.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaBkHS8AUvsEthkMliEKHjveSoz_Godg4&callback=initMap" 
+          type="text/javascript"></script>
    </head>
    <body>
    		<div id="all">
@@ -14,19 +17,22 @@
 	   			</ul>
 	      	</div>
 	      	<div id="col">
-               <center>
                <div style="height: 100px;"></div>
                <div class="roulette" style="display:none;">
-                  <!-- <img src="lottery2/Quack.png" /> 
-                  <img src="lottery2/quack.jpg" /> -->
                   <img src="lottery2/八方雲集.png" />
                   <img src="lottery2/添好茶.png" />
                   <img src="lottery2/吮指王.png" />
                </div>
-               <button id="go">Go</button>
+               <div class="restaurantIntroduction">
+                  我是餐廳，餐廳是我
+               </div>
+               <div id="restaurantMap">
+
+               </div>
+               <button id="go" onclick="pausePress()">開吃!</button>
+               <script type="text/javascript" src="randomChoiceMapJs.js"></script>
                <script src='lottery2/jquery.min.js'></script>
                <script  src="lottery2/index.js"></script>
-               </center>
 	      	</div>
    		</div>
 

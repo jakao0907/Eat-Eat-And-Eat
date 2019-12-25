@@ -17,7 +17,7 @@ var locations = [
   ['滿大碗', 25.15165, 121.7709, 4]
 ];
 
-var map = new google.maps.Map(document.getElementById('map'), {
+var map = new google.maps.Map(document.getElementById('restaurantMap'), {
   zoom: 17,
   center: new google.maps.LatLng(25.151409, 121.773),
   mapTypeId: google.maps.MapTypeId.ROADMAP
