@@ -3,5 +3,8 @@ function pausePress(){
 	x.setAttribute("disabled","disabled");
 	setTimeout(function () {
 		x.innerHTML="已使用";
-	}, 3000);
+		let y = document.getElementsByClassName("roulette-inner");
+		console.log(y.translate);
+
+	}, 3100);
 }
