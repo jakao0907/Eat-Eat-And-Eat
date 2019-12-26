@@ -5,9 +5,11 @@
       <meta charset = "utf-8">
       <title>about</title>
       <link rel = "stylesheet" type = "text/css" href = "randomChoiceCss.css">
-      <script  src="randomChoice.js"></script>
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+      <script src='lottery2/jquery.min.js'></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaBkHS8AUvsEthkMliEKHjveSoz_Godg4&callback=initMap" 
           type="text/javascript"></script>
+      <script  src="randomChoice.js"></script>
    </head>
    <body>
    		<div id="all">
@@ -25,15 +27,14 @@
                   <img src="lottery2/吮指王.png" />
                </div>
                </center>
-               <div class="restaurantIntroduction">
+               <div class="restaurantIntroduction" style="visibility :hidden;">
                   我是餐廳，餐廳是我
                </div>
-               <div id="restaurantMap">
+               <div id="restaurantMap" style="visibility :hidden;">
 
                </div>
                <button id="go" onclick="pausePress()">開吃!</button>
-               <script type="text/javascript" src="randomChoiceMapJs.js"></script>
-               <script src='lottery2/jquery.min.js'></script>
+               <script type="text/javascript" src="randomChoiceMapJs.js" ></script>
                <script  src="lottery2/index.js"></script>
 	      	</div>
    		</div>

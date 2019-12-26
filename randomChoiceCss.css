@@ -60,7 +60,6 @@ button{
   right: 67.5%;
 }
 .restaurantIntroduction{
-  text-align: center;
   position: fixed;
   width: 50%;
   height: 60%;
@@ -74,9 +73,17 @@ button{
 #restaurantMap{
   position: absolute;
   width: 25%;
-  height: 30%;
-  top: 45%;
+  height: 40%;
+  top: 35%;
   right: 65%;
   padding: 1%;
   border-style: solid;
+}
+@keyframes moveTxt{
+    from{
+      opacity: 0%;
+    }
+    to{
+      opacity: 100%;
+    }
 }

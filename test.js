@@ -1,7 +1,8 @@
+var items = [];
 $(function() {
   $.get('https://spreadsheets.google.com/feeds/list/1PfwNgNqYSLfCjUcHyPFTHNekRnu89SYh0rdzTuwtPtM/1/public/values?alt=json', function(data) {
     var d = data.feed.entry;
-    var items = [];
+    // var items = [];
 	for(var i in d) {
 	    var item = {};
 	    item.店家名稱 = d[i].gsx$店家名稱.$t;
@@ -10,9 +11,12 @@ $(function() {
 	    item.電話 = d[i].gsx$電話.$t;
 	    items.push(item);
 	  }
-	  console.table(items);
+	  // console.table(items);
+	  // console.log(items.length);
   });
+  console.log(items.length);
 });
 
+// console.log(items.length);
 
-// https://docs.google.com/spreadsheets/d/1PfwNgNqYSLfCjUcHyPFTHNekRnu89SYh0rdzTuwtPtM/edit#gid=0
+//x = document.getElementsByClassName("roulette-inner")[0];
