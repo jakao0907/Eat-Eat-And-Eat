@@ -9,6 +9,11 @@ function start(){
     go_back_content[0].addEventListener("click",back,false);
     go_back_head=document.getElementsByClassName("header");
     go_back_head[0].addEventListener("click",back,false);
+    shop_hover=document.getElementsByClassName("shop_hover");
+    for(let i=0;i<shop_hover.length;i++)
+        shop_hover[i].addEventListener("mouseover",function(){shop(i)},false);
+    for(let i=0;i<shop_hover.length;i++)
+        shop_hover[i].addEventListener("mouseleave",function(){shop_back(i)},false);
 }
 function left_handler(e){
     if(open_left==false){
@@ -60,5 +65,13 @@ function content_black(){
 function content_back(){
     id=document.getElementsByClassName("hover_all hover_all_black");
     id[0].setAttribute("class","hover_all");
+}
+function shop(i){
+    id=document.getElementsByClassName("shop_hover_text");
+    id[i].setAttribute("class","shop_hover_text shop_hover_text_display");
+}
+function shop_back(i){
+    id=document.getElementsByClassName("shop_hover_text_display");
+    id[0].setAttribute("class","shop_hover_text");
 }
 window.addEventListener("load",start,false);
