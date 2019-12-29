@@ -15,15 +15,41 @@ $(function() {
   });
 });
 
+function build(i){
+  var map = new google.maps.Map(document.getElementById('restaurantMap'), {
+    zoom: 17,
+    center: new google.maps.LatLng(items[i].longitude, items[i].latitude),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var infowindow = new google.maps.InfoWindow();
+
+  var marker, i;
+
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(items[i].longitude, items[i].latitude),
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infowindow.setContent(items[i].name);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+}
+
 function pausePress(){
 	let x = document.getElementById("go");
 	x.hidden=true;
 	setTimeout(function () {
 		let y = document.getElementsByClassName("roulette-inner")[0].style.transform.replace(/[^\d.]/g, '');
+        y = parseInt(y);
+        build(y/50);
 		document.getElementsByClassName("restaurantIntroduction")[0].innerHTML = items[y/50].name;
 		document.getElementsByClassName("restaurantIntroduction")[0].style.visibility="visible";
 		document.getElementById("restaurantMap").style.visibility="visible";
-	}, 3100);
+	}, 7000);
 }
 var open_left=false;
 var open_right=false;
