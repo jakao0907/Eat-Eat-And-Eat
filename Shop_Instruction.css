@@ -5,11 +5,10 @@ body{
     margin: 0; 
     padding: 0;
     min-height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
     background-image:url("main.jpg");
     background-size:cover;
     background-attachment:fixed;
+    overflow-y: scroll;
 }
 .background{ /*背景圖*/
     margin-top: 0px;
@@ -22,7 +21,7 @@ body{
     height: 100%;
     width: 100%;
     font-weight: bold;
-    text-align:center;
+    /* text-align:center; */
     background:rgba(255,255,255,0.5);
 }
 .header{    /*最上面那條的div*/
@@ -144,10 +143,11 @@ a:not(.header){
 }
 .content{
     position: absolute;
-    padding-top: 70px;
     /* display: inline-block; */
     width: 100%;
-    min-height: 100%;
+    /* min-height: 100%; */
+    /* align-items:center;
+    justify-content:center; */
     z-index: 0;
     transition: 0.4s;
 }
@@ -155,34 +155,60 @@ a:not(.header){
     /* overflow: hidden; */
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     transition: 0.4s;
+    z-index: 3;
 }
 .hover_all_black{   /*把整個頁面變半透明用的覆蓋div */
     background: rgba(0,0,0,0.6);
     position: absolute;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     transition: 0.4s;
 }
-.content_black{
-    background: rgba(0,0,0,0.6);
-    transition: 0.4s;
-}
-.shop{  /*每個店家區塊的div */
+
+.shop{  /*店家區塊的div */
+    /* margin-bottom: 100px; */
+    position: relative;
     font-family: cursive;
     font-size: 20px;
-    padding-top: 100px;
-    width: 100%;
-    background-color: white;
+    /* display:flex; */
+    justify-content:center;
+    /* top: 100px; */
+    left: 20%;
+    width:60%;
     border: solid;
+    background-color: rgb(0,0,0,0.9);
 }
 .hover_img{
-    position: absolute;
+    padding: 5%;
+    position: relative;
+    top: 70px;
     width: 100%;
-    overflow: hidden;
+    z-index: 1;
+}
+.hover_img img{
+    /* position:absolute; */
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	width:90%;
+    z-index: -1;
+}
+.contact{
+    width: 100%;
+    padding: 5%;
+    /* height: 300px; */
+    color: white;
+}
+.contact div{
+    margin: 10px;
 }
 #ho{
     margin: 0;
-    height: 0%;
+    height: 100%;
+}
+h1{
+    font-size: 1.539em;
 }
