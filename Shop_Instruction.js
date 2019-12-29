@@ -18,21 +18,22 @@ function getValue(varname)
   }
   value = unescape(value);
   value.replace(/\+/g," ");
-  return value;
+  return parseInt(value);
 }
 
+
 $(function() {
-    var shop = getValue("shop");
-    $.getJSON("Shop_data.json","", function(data) {
-        var d = data;
-        for(var i in d) {
-            if(d[i].gsx$name.$t==shop){
-                tem.name = d[i].gsx$name.$t;
-                item.longitude = d[i].gsx$longitude.$t;
-                item.latitude = d[i].gsx$latitude.$t;
-                item.phone = d[i].gsx$phone.$t;
-                items.push(item);
-            }
-        }
-    })
+  $.get('https://spreadsheets.google.com/feeds/list/1PfwNgNqYSLfCjUcHyPFTHNekRnu89SYh0rdzTuwtPtM/1/public/values?alt=json', function(data) {
+    var d = data.feed.entry;
+    var i = getValue("shop");
+    var item = {};
+    item.name = d[i].gsx$name.$t;
+    item.opentime = d[i].gsx$opentime.$t;
+    item.address = d[i].gsx$address.$t;
+    item.phone = d[i].gsx$phone.$t;
+    document.getElementsByClassName("contact")[0].innerHTML="<h1>"+item.name+"<h1>"+
+                                                            "<div>Open time:"+item.opentime+"</div>"+
+                                                            "<div>地址:"+item.address+"</div>"+
+                                                            "<div>電話:"+item.phone+"</div>";
+    });
 });
