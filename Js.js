@@ -47,14 +47,14 @@ function back(e){
             id2[i].setAttribute("class","list-left");
         }
         open_left=false;
-        content_back()
+        content_back();
         e.preventDefault();
     }
     else if(open_right==true){
         id=document.getElementsByClassName("right-list left-right-list-open");
         id[0].setAttribute("class","right-list");
         open_right=false;
-        content_back()
+        content_back();
         e.preventDefault();
     }
 }
