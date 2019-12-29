@@ -74,4 +74,5 @@ function shop_back(i){
     id=document.getElementsByClassName("shop_hover_text_display");
     id[0].setAttribute("class","shop_hover_text");
 }
+
 window.addEventListener("load",start,false);

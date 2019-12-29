@@ -8,7 +8,7 @@ body{
     min-height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-image:url("main.jpg");
+    background-image:url("圖包/main.jpg");
     background-size:cover;
     background-attachment:fixed;
 }
@@ -230,7 +230,7 @@ div{
     position: relative;
     padding: 20px;
     padding-bottom: 0px;
-    height: 55%;
+    height: 30%;
 }
 .foot{
     border: solid;
@@ -245,4 +245,8 @@ div{
 }
 h1{
     font-size: 1.539em;
+}
+.text div{
+    margin: 10px;
+    text-align: left;
 }
