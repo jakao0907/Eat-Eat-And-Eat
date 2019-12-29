@@ -22,7 +22,7 @@ function build(){
                 str+='</div>';
                 str+='</div>';
                 str+='<div class="hover_img">'
-                  str+='<img src="圖包/notte_paste.jpg" alt="">';
+                  str+='<img src="圖包/'+idx+'-1.jpg" alt="">';
                 str+='</div>';
                 str+='<div class="text">';
                   str+='<div>店名:'+items[idx].name+'</div>';
@@ -42,7 +42,7 @@ function build(){
                   str+='</div>';
                 str+='</div>';
                 str+='<div class="hover_img">'
-                  str+='<img src="圖包/notte_paste.jpg" alt="">';
+                  str+='<img src="圖包/'+idx+'-1.jpg" alt="">';
                 str+='</div>';
                 str+='<div class="text">';
                   str+='<div>店名:'+items[idx].name+'</div>';
