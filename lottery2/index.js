@@ -1,7 +1,7 @@
 (function($){var Roulette=function(options){
 	var defaultSettings={
 		maxPlayCount:null,
-		speed:10,
+		speed:15,
 		stopImageNumber:null,
 		rollCount:3,
 		duration:3,
