@@ -11,7 +11,11 @@
 	width:100%;
 	height: 70px;
     padding:0px;
-    background:rgba(0, 0, 0, 0.5);
+    background:rgba(0, 0, 0, 1);
+	font-family: cursive;
+    font-size: 20px;
+	text-align: center;
+	font-weight: bold;
 }
 #all{
 	background-image: url("food2.jpg");
@@ -53,4 +57,103 @@ li{
 ul{
 	margin:0px;
 	padding-top:20px;
+}
+.find{  /*find的div*/
+    position: absolute;
+    /* background: white; */
+    right: 0px;
+    width: 200px;
+    height: 70px;
+}
+.memu{  /*Memu的div*/
+    position: absolute;
+    /* background: white; */
+    left: 0px;
+    width: 200px;
+    height:70px;
+}
+.a_tag{
+    line-height: 70px;
+}
+a:not(.header){
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+#top a{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 70px;
+    height: 70px;
+    width: 200px;
+    color: white;
+    position: relative;
+}
+.list-left{ /*左大區塊的每一個區塊 */
+    position: relative;
+    font-size: 20px;
+    height:30px;
+    left:-200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition:0.4s;
+}
+.list-left:hover{   /*滑鼠覆蓋在左邊的清單上*/
+    background: rgba(52, 23, 216, 0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);;
+    left: 30px;
+}
+.list-right{ /*右大區塊的每一個區塊 */
+    position: relative;
+    font-size: 20px;
+    height:30px;
+    right:0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: 0.4s;
+}
+.list-right:hover{  /*滑鼠覆蓋在右邊的清單上*/
+    background: rgba(52, 23, 216, 0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);;
+    right: 30px;
+}
+.left-right-list a{
+    text-decoration: none;
+    color: black;
+}
+.left-list{ /*整個左大區塊的CSS */
+    /* display: none; */ 
+    top: 70px;
+    left: 0px;
+    position: fixed;
+    text-align: center;
+    width: 0px;
+    height: 100%;
+    background: white;
+    padding-bottom: 10px;
+    z-index: 1;
+    transition:0.4s;
+}
+
+.left-right-list-open{
+    width: 200px;
+    transition: 0.4s;
+}
+.list-left-open{
+    left: 0px;
+    transition:0.4s;
+}
+.hover_all{ /*把整個頁面變半透明用的覆蓋div */
+    /* overflow: hidden; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+.hover_all_black{   /*把整個頁面變半透明用的覆蓋div */
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
 }
