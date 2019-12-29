@@ -225,9 +225,9 @@ div{
 }
 .text{
     font-family:Microsoft JhengHei;
-    position: relative;
-    padding: 10%;
-    height: 30%;
+    /* position: relative; */
+    padding: 2vh;
+    height: 10vh;
 }
 .foot{
     border: solid;
