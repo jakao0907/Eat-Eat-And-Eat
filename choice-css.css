@@ -202,7 +202,7 @@ div{
     position: absolute;
     z-index: 2;
     width: 24%;
-    height: 350px;
+    height: 45vh;
     transition: 0.4s;
 }
 .shop_hover_text{
@@ -226,8 +226,7 @@ div{
 .text{
     font-family:Microsoft JhengHei;
     position: relative;
-    padding: 20px;
-    padding-bottom: 0px;
+    padding: 10%;
     height: 30%;
 }
 .foot{
