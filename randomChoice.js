@@ -10,6 +10,8 @@ $(function() {
 	    item.longitude = d[i].gsx$longitude.$t;
 	    item.latitude = d[i].gsx$latitude.$t;
 	    item.phone = d[i].gsx$phone.$t;
+        item.address = d[i].gsx$address.$t;
+        item.opentime = d[i].gsx$opentime.$t;
 	    items.push(item);
 	  }
   });
@@ -44,12 +46,15 @@ function pausePress(){
 	x.hidden=true;
 	setTimeout(function () {
 		let y = document.getElementsByClassName("roulette-inner")[0].style.transform.replace(/[^\d.]/g, '');
-        y = parseInt(y);
-        build(y/50);
-		document.getElementsByClassName("restaurantIntroduction")[0].innerHTML = items[y/50].name;
+        y = parseInt(y)/50;
+        build(y);
+		document.getElementsByClassName("restaurantIntroduction")[0].innerHTML = '<h1>'+items[y].name+'<h1>'+
+                                                                                 '<h4>營業時間:'+items[y].opentime+'<h4>'+
+                                                                                 '<h4>地址:'+items[y].address+'<h4>'+
+                                                                                 '<h4>電話:'+items[y].phone+'<h4>';
 		document.getElementsByClassName("restaurantIntroduction")[0].style.visibility="visible";
 		document.getElementById("restaurantMap").style.visibility="visible";
-	}, 7000);
+	}, 6500);
 }
 var open_left=false;
 var open_right=false;
