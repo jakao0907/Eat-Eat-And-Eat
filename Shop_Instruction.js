@@ -31,6 +31,7 @@ $(function() {
     item.opentime = d[i].gsx$opentime.$t;
     item.address = d[i].gsx$address.$t;
     item.phone = d[i].gsx$phone.$t;
+    document.getElementsByClassName("hover_img")[0].innerHTML='<img src="圖包/'+i+'-2.jpg" alt="">';
     document.getElementsByClassName("contact")[0].innerHTML="<h1>"+item.name+"<h1>"+
                                                             "<div>Open time:"+item.opentime+"</div>"+
                                                             "<div>地址:"+item.address+"</div>"+
