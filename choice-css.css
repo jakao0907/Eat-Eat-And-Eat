@@ -172,6 +172,7 @@ div{
 }
 .hover_img{
     width: 100%;
+    max-height: 30vh;
     overflow: hidden;
 }
 .hover_img img{
