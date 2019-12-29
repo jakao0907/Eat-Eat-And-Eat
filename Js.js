@@ -4,7 +4,7 @@ function start(){
     left_a_link=document.getElementById("left");
     right_a_link=document.getElementById("right");
     left_a_link.addEventListener("click",left_handler,false);
-    right_a_link.addEventListener("click",right_handler,false);
+    // right_a_link.addEventListener("click",right_handler,false);
     go_back_content=document.getElementsByClassName("content");
     go_back_content[0].addEventListener("click",back,false);
     go_back_head=document.getElementsByClassName("header");
