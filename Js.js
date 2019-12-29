@@ -75,4 +75,7 @@ function shop_back(i){
     id[0].setAttribute("class","shop_hover_text");
 }
 
-window.addEventListener("load",start,false);
+function toStart(){
+    setTimeout(start,500);
+}
+window.addEventListener("load",toStart,false);
