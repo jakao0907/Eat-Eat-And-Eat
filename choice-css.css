@@ -169,6 +169,7 @@ div{
     float: left;
     background-color: white;
     margin-bottom: 10px;
+    transition: 1s;
 }
 .hover_img{
     width: 100%;
