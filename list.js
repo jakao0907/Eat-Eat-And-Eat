@@ -54,6 +54,7 @@ function build(){
         str+='</div>';
     }
     document.getElementsByClassName("content")[0].innerHTML=str;
+    console.log('test');
 }
 
 
