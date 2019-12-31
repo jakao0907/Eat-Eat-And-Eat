@@ -54,7 +54,7 @@ function pausePress(){
                                                                                  '<h4>電話:'+items[y].phone+'<h4>';
 		document.getElementsByClassName("restaurantIntroduction")[0].style.visibility="visible";
 		document.getElementById("restaurantMap").style.visibility="visible";
-	}, 6500);
+	}, 7000);
 }
 var open_left=false;
 var open_right=false;
